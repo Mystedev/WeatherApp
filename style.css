@@ -1,0 +1,137 @@
+body {
+    background-image: linear-gradient(to right top, #0f1c30, #0d3c55, #006076, #05878e, #40ad9c);
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Cascadia Code';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#weather-container {
+    background: rgba(255, 255, 255, 0.3);
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(13, 45, 48, 0.638);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: 0.3s ease-in;
+}
+h1{
+    color: black;
+    font-size: 3em;
+}
+ label, p {
+    color: #fff;
+    margin: 8px 0;
+}
+input {
+    width: 300px;
+    min-height: 45px;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 5px solid rgb(255, 255, 255);
+    margin-top: 20px;
+    transition: .2s ease-in-out;
+    font-size: 20px;
+    color: black;
+}
+input:hover{
+    background-color:rgba(230, 232, 235, 0.839);
+}
+button {
+    background: #095c62;
+    color: rgb(253, 253, 253);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.2s ease-in;
+}
+button:hover {
+    background: #000000;
+    color: #fff;
+}
+
+#temp-div p {
+    font-size: 60px;
+    margin-top: -30px;
+}
+
+#weather-info {
+    font-size: 30px;
+    color: black;
+}
+
+#weather-icon {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px; 
+    margin-bottom: 0;
+    display: none;
+}
+
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourly-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+}
+
+.hourly-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#hourly-heading {
+    color: #fff;
+    margin-top: 10px;
+}
+@media only screen and (max-width: 600px) {
+    .hourly-item {
+        font-size: 0.9em;
+    }
+    #weather-container{
+        min-width: 9px;
+        min-height: 500px;
+        max-width: fit-content;
+        min-height: min-content;
+        overflow: hidden;
+    }
+    #hourly-heading,
+    .temp {
+        font-weight: bold;
+    }
+    #hourly-heading {
+        text-align: left;
+    }
+    .hourly-item {
+        /* Hide icon on small screens */
+        visibility: hidden;
+    }
+    .temp {
+        display: none;
+    }
+
+}
+    
